@@ -1,0 +1,39 @@
+{
+    "operation_name": "register",
+    "resource_name": "demoResc",
+    "collections": [
+        "/tempZone/home/rods/coll0",
+        "/tempZone/home/rods/coll1",
+        "/tempZone/home/rods/coll2",
+        "/tempZone/home/rods/coll2/coll2_1"
+    ],
+    "data_objects": [
+        {
+            "logical_path": "/tempZone/home/rods/coll0/file0.txt",
+            "metadata": [
+                {
+                    "attribute": "a0",
+                    "value": "v0",
+                    "unit": "u0"
+                },
+                {
+                    "attribute": "a1",
+                    "value": "v1"
+                }
+            ],
+            "physical_path": "/tmp/irods/coll0/file0.txt"
+        },
+        {
+            "logical_path": "/tempZone/home/rods/coll1/file0.txt",
+            "physical_path": "/tmp/irods/coll1/file0.txt"
+        },
+        {
+            "logical_path": "/tempZone/home/rods/coll2/file0.txt",
+            "physical_path": "/tmp/irods/coll2/file0.txt"
+        },
+        {
+            "logical_path": "/tempZone/home/rods/coll2/coll2_1/file0.txt",
+            "physical_path": "/tmp/irods/coll2/coll2_1/file0.txt"
+        }
+    ]
+}

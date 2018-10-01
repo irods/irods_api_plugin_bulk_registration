@@ -1,0 +1,43 @@
+{
+    "id": "file:///var/lib/irods/configuration_schemas/v3/irods_api_plugin_bulk_registration.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "operation_name": {"enum": ["register","register_as_replica"]},
+        "collections": {
+            "type": "array",
+            "items": {"type": "string"},
+            "uniqueItems": true
+        },
+        "data_objects": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "logical_path": {"type": "string"},
+                    "metadata": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "attribute": {"type": "string"},
+                                "value": {"type": "string"},
+                                "unit": {"type": "string"}
+                            },
+                            "required": ["attribute","value"]
+                        }
+                    },
+                    "physical_path": {"type": "string"}
+                },
+                "required": ["logical_path","physical_path"]
+            }
+        },
+        "resource_name": {"type": "string"}
+    },
+    "required": [
+        "collections",
+        "data_objects",
+        "operation_name",
+        "resource_name"
+    ]
+}
